@@ -524,10 +524,12 @@ class _af_design:
       for amino in seq_list:
           if horp[amino] == 'h':
              count_of_p += 1
-              
+      if "C" in seq_list:
+        count_of_p += 420
+        
       model_nums = self._get_model_nums(**model_flags)
       aux = self.predict(mut_seq, return_aux=True, verbose=False, model_nums=model_nums, **kwargs)
-      loss = aux["log"]["loss"]+0.9*float(count_of_p/len(seq_list))
+      loss = aux["log"]["loss"]+float(count_of_p/len(seq_list))
   
       # decide
       delta = loss - current_loss
