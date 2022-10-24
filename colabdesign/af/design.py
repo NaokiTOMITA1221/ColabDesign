@@ -522,7 +522,7 @@ class _af_design:
       seq_list = list(current_seq)
       count_of_p = 0
       for amino in seq_list:
-          if horp[amino] == 'p':
+          if horp[amino] == 'h':
              count_of_p += 1
               
       model_nums = self._get_model_nums(**model_flags)
