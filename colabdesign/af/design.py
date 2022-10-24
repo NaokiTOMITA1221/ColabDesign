@@ -518,7 +518,7 @@ class _af_design:
 
       # get loss
       
-      horp = {'A':'h','R':'p','N':'p','D':'p','C':'m','Q':'p','E':'p','G':'h','H':'m','I':'h','L':'h','K':'p','M':'m','F':'h','P':'p','S':'p','T':'p','W':'h','T':'h','V':'h'}
+      horp = {'A':'h','R':'p','N':'p','D':'p','C':'m','Q':'p','E':'p','G':'h','H':'m','I':'h','L':'h','K':'p','M':'m','F':'h','P':'p','S':'p','T':'p','W':'h','Y':'h','V':'h'}
       seq_list = list(current_seq)
       count_of_p = 0
       for amino in seq_list:
