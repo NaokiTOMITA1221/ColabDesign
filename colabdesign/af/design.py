@@ -517,9 +517,17 @@ class _af_design:
       else:      mut_seq = self._mutate(current_seq, plddt, seq_logits, mutation_rate)
 
       # get loss
+      
+      horp = {'A':'h','R':'p','N':'p','D':'p','C':'m','Q':'p','E':'p','G':'h','H':'m','I':'h','L':'h','K':'p','M':'m','F':'h','P':'p','S':'p','T':'p','W':'h','T':'h','V':'h'}
+      seq_list = list(current_seq)
+      count_of_p = 0
+      for amino in seq_list:
+          if horp[amino] == 'p':
+             count_of_p += 1
+              
       model_nums = self._get_model_nums(**model_flags)
       aux = self.predict(mut_seq, return_aux=True, verbose=False, model_nums=model_nums, **kwargs)
-      loss = aux["log"]["loss"]
+      loss = aux["log"]["loss"]+0.3*float(count_of_p/len(seq_list))
   
       # decide
       delta = loss - current_loss
