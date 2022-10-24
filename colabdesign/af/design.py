@@ -527,7 +527,7 @@ class _af_design:
               
       model_nums = self._get_model_nums(**model_flags)
       aux = self.predict(mut_seq, return_aux=True, verbose=False, model_nums=model_nums, **kwargs)
-      loss = aux["log"]["loss"]+0.5*float(count_of_p/len(seq_list))
+      loss = aux["log"]["loss"]+0.9*float(count_of_p/len(seq_list))
   
       # decide
       delta = loss - current_loss
