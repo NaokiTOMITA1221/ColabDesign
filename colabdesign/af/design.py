@@ -525,7 +525,7 @@ class _af_design:
           if horp[amino] == 'h':
              count_of_p += 1
       if "C" in seq_list:
-        count_of_p += 420
+        count_of_p += 42000
         
       model_nums = self._get_model_nums(**model_flags)
       aux = self.predict(mut_seq, return_aux=True, verbose=False, model_nums=model_nums, **kwargs)
