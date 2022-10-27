@@ -208,7 +208,7 @@ class _af_design:
 
     # increment
     self._k += 1
-'''
+
   def _print_log(self, print_str=None, aux=None):
     if aux is None: aux = self.aux
     keys = ["models","recycles","hard","soft","temp","seqid","loss",
@@ -223,7 +223,7 @@ class _af_design:
 
     print(dict_to_str(aux["log"], filt=self.opt["weights"],
                       print_str=print_str, keys=keys+["rmsd"], ok=["plddt","rmsd"]))
-''' 
+    
   def _save_results(self, aux=None, save_best=False,
                     best_metric=None, metric_higher_better=False,
                     verbose=True):
