@@ -208,13 +208,13 @@ class _af_design:
 
     # increment
     self._k += 1
-
+'''
   def _print_log(self, print_str=None, aux=None):
     if aux is None: aux = self.aux
     keys = ["models","recycles","hard","soft","temp","seqid","loss",
             "seq_ent","mlm","helix","pae","i_pae","exp_res","con","i_con",
             "sc_fape","sc_rmsd","dgram_cce","fape","plddt","ptm"]
-    
+'''   
     if "i_ptm" in aux["log"]:
       if len(self._lengths) > 1:
         keys.append("i_ptm")
