@@ -214,7 +214,7 @@ class _af_design:
     keys = ["models","recycles","hard","soft","temp","seqid","loss",
             "seq_ent","mlm","helix","pae","i_pae","exp_res","con","i_con",
             "sc_fape","sc_rmsd","dgram_cce","fape","plddt","ptm"]
-'''   
+  
     if "i_ptm" in aux["log"]:
       if len(self._lengths) > 1:
         keys.append("i_ptm")
@@ -223,7 +223,7 @@ class _af_design:
 
     print(dict_to_str(aux["log"], filt=self.opt["weights"],
                       print_str=print_str, keys=keys+["rmsd"], ok=["plddt","rmsd"]))
-
+''' 
   def _save_results(self, aux=None, save_best=False,
                     best_metric=None, metric_higher_better=False,
                     verbose=True):
